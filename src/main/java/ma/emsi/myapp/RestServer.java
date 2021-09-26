@@ -15,7 +15,7 @@ public class RestServer
             data.put("hamza", "hammouti");
             data.put("aziz", "hansaoui");
             data.put("reda", "abounasr");
-            data.put("imad", "elyazghy");
+            data.put("imad", "elyazghyd");
             resp.type("application/json");
             return gson.toJson(data);
         });    
