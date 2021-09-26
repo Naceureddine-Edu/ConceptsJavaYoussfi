@@ -68,6 +68,9 @@
               <mainClass>ma.emsi.myapp.RestServer</mainClass>
             </manifest>
           </archive>
+          <outputDirectory>
+                 ${project.build.directory}
+              </outputDirectory>
         </configuration>
         <executions>
          
@@ -77,11 +80,6 @@
             <goals>
               <goal>single</goal>
             </goals>
-            <configuration>           <!-- copy dependencies / jars to ${project.build.directory}/lib/ -->
-              <outputDirectory>
-                 ${project.build.directory}/lib/
-              </outputDirectory>
-            </configuration>
           </execution>
             
         </executions>
