@@ -25,19 +25,6 @@ jobs:
     
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-      
-# Sonarqube
-    - name: SonarQube Scan
-      uses: sonarsource/sonarqube-scan-action@master
-      with:
-        host: ${{ secrets.SONAR_HOST_URL }}
-        login: admin
-        password: Admin
-        #projectBaseDir: myapp/src
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        LC_ALL: "ru_RU.UTF-8"
 
 # Docker
     - name: Build and Push Docker Image
@@ -50,3 +37,16 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
 
+# Sonarqube
+   # - name: SonarQube Scan
+   #   uses: sonarsource/sonarqube-scan-action@master
+   #   with:
+   #     host: ${{ secrets.SONAR_HOST_URL }}
+   #     login: admin
+   #     password: Admin
+        #projectBaseDir: myapp/src
+  #    env:
+  #      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  #      SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+  #      LC_ALL: "ru_RU.UTF-8"
+  
