@@ -28,7 +28,7 @@ jobs:
       
 # Sonarqube
     - name: SonarQube Scan
-      uses: achilleslinux/sonarqube-action@main
+      uses: kitabisa/sonarqube-action@master
       with:
         host: ${{ secrets.SONAR_HOST_URL }}
         login: admin
