@@ -28,11 +28,16 @@ jobs:
       
 # Sonarqube
     - name: SonarQube Scan
-      uses: kitabisa/sonarqube-action@v1.1.0
+      uses: achilleslinux/sonarqube-action@master
       with:
         host: ${{ secrets.SONAR_HOST_URL }}
-        login: ${{ secrets.SONAR_TOKEN }}
-        
+        login: admin
+        password: Admin
+        #projectBaseDir: myapp/src
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        LC_ALL: "ru_RU.UTF-8"
 
 # Docker
     - name: Build and Push Docker Image
