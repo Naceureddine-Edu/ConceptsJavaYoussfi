@@ -37,3 +37,4 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           host: ${{ secrets.SONARQUBE_HOST }}
           login: ${{ secrets.MY_SONAR_TOKEN	 }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
